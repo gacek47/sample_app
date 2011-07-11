@@ -29,7 +29,7 @@ describe PagesController do
     it "should have the right title" do
       get 'contact'
       response.should have_selector("title",
-                                    :content => @base_title + " | Kontakty")
+                                    :content => @base_title + " | Contacts")
     end
   end
 
