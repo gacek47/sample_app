@@ -1,11 +1,16 @@
-SampleApp::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/contact"
+﻿SampleApp::Application.routes.draw do
   
-  get "pages/about"
+  # routes wskazane bezposrednio; potrzebne poprzednio dla pages-controller
+  # get "pages/home"
+  # get "pages/contact"
+  # get "pages/about"
+  # get "pages/help"
+  ##############################################
   
-  get "pages/help"
+  # nowe ogólne, zwięzłe wskazanie ścieżek  do podstron; dla integration_test 
+    match '/contact', :to => 'pages#contact'
+    match '/about',   :to => 'pages#about'
+    match '/help',    :to => 'pages#help'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,7 +61,7 @@ SampleApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+    root :to => 'pages#home'
 
   # See how all your routes lay out with "rake routes"
 
