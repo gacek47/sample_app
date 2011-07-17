@@ -7,7 +7,7 @@ SampleApp::Application.routes.draw do
   # get "pages/help"
   ##############################################
   
-  # nowe ogólne, zwięzłe wskazanie ścieżek  do podstron; dla integration_test 
+  # nowe ogolne, zwiezle wskazanie sciezek  do podstron; dla integration_test 
     match '/contact', :to => 'pages#contact'
     match '/about',   :to => 'pages#about'
     match '/help',    :to => 'pages#help'
