@@ -1,4 +1,4 @@
-﻿SampleApp::Application.routes.draw do
+SampleApp::Application.routes.draw do
   
   # routes wskazane bezposrednio; potrzebne poprzednio dla pages-controller
   # get "pages/home"
